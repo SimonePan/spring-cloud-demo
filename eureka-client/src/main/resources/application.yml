@@ -1,0 +1,10 @@
+server:
+  port: 8775
+#对应用起别名
+spring:
+  application:
+    name: eureka-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8771/eureka

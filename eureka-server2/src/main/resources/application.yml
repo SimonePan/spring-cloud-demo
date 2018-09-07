@@ -1,0 +1,18 @@
+server:
+  port: 8773
+eureka:
+  instance:
+    hostname: server2
+  client:
+    #是否将自己注册到eureka服务器上，默认true。当前为eureka服务器，所以false
+    register-with-eureka: false
+    #是否从eureka服务器获取注册信息，默认true。单节点不需要同步其他eureka服务器的注册信息，所以false。
+    #fetch-registry: false
+    #设置eureka服务器地址
+    service-url:
+      defaultZone: http://server1:8771/eureka
+spring:
+  application:
+    name: eureka-server2-8773
+  profiles:
+    active: server2
